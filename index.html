@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section class="initPage">
+    <section class="initPage" id="initPage">
         <header>
             <nav>
                 <a class="logo" href="index.html"><i class="bi bi-moon-fill"></i> PORTO DA LUA</a>
@@ -22,10 +22,10 @@
                     <div class="line3"></div>
                 </div>
                 <ul class="nav-list">
-                    <li><a class="topicos" href="#">INICIO</a></li>
+                    <li><a class="topicos" href="#initPage">INICIO</a></li>
                     <li><a class="topicos" href="#">SOBRE</a></li>
                     <li><a class="topicos" href="#">CONTATOS</a></li>
-                    <li><a class="topicos" href="#">SERVICOS</a></li>
+                    <li><a class="topicos" href="#family">SERVICOS</a></li>
                 </ul>
             </nav>
         </header>
@@ -42,7 +42,7 @@
 
     <section class="Friendly">
         <div class="locationTopic">
-            <h1>Localizacao</h1>
+            <h1>Localização<span>.</span></h1>
         </div>
         <div class="containerBox">
             <div class="whiteBox">
@@ -55,6 +55,124 @@
         </div>
     </section>
 
+    <section class="family" id="family">
+        <div class="paraiso">
+            <h1 class="tittleParaiso">Descubra o Paraíso no <span>Hotel Porto da Lua.</span></h1>
+        </div>
+        <div class="containerFamily">
+            <div class="imgWrapper hidden-up">
+                <img class="imgFamily" src="img/praiaPorto.png">
+                <div class="imgDescription">
+                    <i class="bi bi-1-circle-fill meu-icone"></i>
+                    <span class="descricao">Praia encantadora</span>
+                </div>
+            </div>
+            <div class="imgWrapper hidden-up">
+                <img class="imgFamily" src="img/praiaPorto.png">
+                <div class="imgDescription">
+                    <i class="bi bi-2-circle-fill meu-icone"></i>
+                    <span class="descricao">Praia encantadora</span>
+                </div>
+            </div>
+            <div class="imgWrapper hidden-up">
+                <img class="imgFamily" src="img/praiaPorto.png">
+                <div class="imgDescription">
+                    <i class="bi bi-3-circle-fill meu-icone"></i>
+                    <span class="descricao">Praia encantadora</span>
+                </div>
+            </div>
+            <div class="imgWrapper hidden-up">
+                <img class="imgFamily" src="img/praiaPorto.png">
+                <div class="imgDescription">
+                    <i class="bi bi-4-circle-fill meu-icone"></i>
+                    <span class="descricao">Praia encantadora</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <div>
+            <h2></h2>
+            <img src="">
+        </div>
+    </section>
+
+    <section class="rodape">
+        <footer class="hidden-up">
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1>Porto da Lua</h1>
+                    <p>It's all about your dreams.</p>
+
+                    <div id="footer_social_media">
+                        <a href="#" class="footer-link" id="instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" class="footer-link" id="facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" class="footer-link" id="whatsapp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <h3>Experiências</h3>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Nossa Estrutura</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Passeios e Aventuras</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Eventos e Música ao Vivo</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <h3>O que Oferecemos</h3>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Reserva Online</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Área do Hóspede</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Tour Virtual</a>
+                    </li>
+                </ul>
+
+                <div id="footer_subscribe">
+                    <h3>Fique por dentro</h3>
+
+                    <p>
+                        Digite seu e-mail para receber novidades,
+                        promoções exclusivas e ofertas imperdíveis do nosso hotel.
+                    </p>
+
+                    <div id="input_group">
+                        <input type="email" id="email">
+                        <button>
+                            <i class="bi bi-envelope-arrow-up-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer_copyright">
+                &#169
+                2025 all rights reserved
+            </div>
+        </footer>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -63,6 +181,8 @@
         crossorigin="anonymous"></script>
     <script src="scripts/headerRol.js"></script>
     <script src="scripts/scroll.js"></script>
+    <script src="scripts/topicosScroll.js"></script>
+    <script src="scripts/efeitoMove.js"></script>
 </body>
 
 </html>
