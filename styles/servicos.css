@@ -1,0 +1,108 @@
+.Servicos {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.paraiso1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tittleParaiso1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-top: 80px;
+}
+
+.destaqueText1 {
+    color: #ff7b00;
+}
+
+.text-center {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.primeiraColuna {
+    margin-bottom: 100px;
+}
+
+.containerServicos {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.containerServicos img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all ease-in-out 0.5s;
+    margin-bottom: 100px;
+}
+
+.containerServicos img:hover {
+    width: 35%;
+}
+
+.containerServicos :nth-child(2){
+    transition-delay: 500ms;
+}
+.containerServicos :nth-child(3){
+    transition-delay: 700ms;
+}
+.containerServicos :nth-child(4){
+    transition-delay: 900ms;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Poppins", sans-serif;
+}
+
+.meu-icone {
+    font-size: 30px;
+    margin-bottom: 4px;
+    color: #ff7b00;
+}
+
+.descricao {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .row.row-cols-2 {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .primeiraColuna, .segundaColuna {
+      width: 100%;
+    }
+  
+    .segundaColuna {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    .containerServicos img {
+        width: 20%;
+    }
+
+    .tittleParaiso1 {
+        text-align: center;
+    }
+  }

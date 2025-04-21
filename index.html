@@ -7,7 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/servicos.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/slideOferecimento.css">
+    <link rel="stylesheet" href="styles/sobre.css">
+    <link rel="stylesheet" href="styles/servicosVIP.css">
+    <link rel="stylesheet" href="styles/localizacao.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <title>Hotel: Porto da Lua</title>
 </head>
 
@@ -23,9 +33,9 @@
                 </div>
                 <ul class="nav-list">
                     <li><a class="topicos" href="#initPage">INICIO</a></li>
-                    <li><a class="topicos" href="#">SOBRE</a></li>
-                    <li><a class="topicos" href="#">CONTATOS</a></li>
-                    <li><a class="topicos" href="#family">SERVICOS</a></li>
+                    <li><a class="topicos" href="#sobre">SOBRE</a></li>
+                    <li><a class="topicos" href="#contatos">CONTATOS</a></li>
+                    <li><a class="topicos" href="#servicos">SERVICOS</a></li>
                 </ul>
             </nav>
         </header>
@@ -36,69 +46,226 @@
             <h5 class="hidden">Descanso, beleza e<br>
                 mar em um so lugar
             </h5>
-            <button class="botaoDestaque hidden">RESERVE</button>
+            <button class="botaoDestaque hidden" id="botaoReserva">RESERVE</button>
         </div>
     </section>
 
-    <section class="Friendly">
-        <div class="locationTopic">
-            <h1>Localização<span>.</span></h1>
+    <section class="Servicos" id="">
+        <div class="paraiso1">
+            <h1 class="tittleParaiso1 hidden-up ">Descubra o paraiso no <span class="destaqueText1">Hotel Porto da
+                    Lua.</span></h1>
         </div>
-        <div class="containerBox">
-            <div class="whiteBox">
-                <h4 class="hidden-right">Encontre-nos facilmente com a integração do<br> Google Maps.
-                    Insira nosso endereço para uma navegação simples e uma chegada sem estresse.</h4>
-                <a class="link" href="https://maps.app.goo.gl/3XW3Brnc84vHGzZ18" target="_blank">
-                    <img class="mapPorto hidden-right" src="img/mapaPorto.jpeg">
+        <div class="container text-center">
+            <div class="row row-cols-2">
+                <div class="col primeiraColuna">
+                    <div class="item hidden">
+                        <i class="bi bi-1-circle-fill meu-icone"></i>
+                        <span class="descricao">Localização Privilegiada.</span>
+                        <span>A poucos passos do mar, com uma vista encantadora e o som relaxante das ondas.</span>
+                    </div>
+                    <div class="item hidden">
+                        <i class="bi bi-2-circle-fill meu-icone"></i>
+                        <span class="descricao">Tranquilidade em Meio à Natureza</span>
+                        <span>Desconecte-se da correria e aproveite momentos de paz cercado por verde e brisa
+                            litorânea.</span>
+                    </div>
+                    <div class="item hidden">
+                        <i class="bi bi-3-circle-fill meu-icone"></i>
+                        <span class="descricao">Romance à Beira-Mar</span>
+                        <span>Cenário perfeito para momentos especiais a dois, com charme e privacidade.</span>
+                    </div>
+                </div>
+                <div class="col segundaColuna">
+                    <div class="containerServicos">
+                        <img class="hidden-right" src="img/portoMar.png">
+                        <img class="hidden-right" src="img/piscinaPorto.png">
+                        <img class="hidden-right" src="img/areaPorto.png">
+                        <img class="hidden-right" src="img/praiaPorto.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="localizacao">
+        <div class="containerTextLocaliza">
+            <h1 class="tittleLocaliza hidden-up">Descubra nossa <span class="destaqueTextlocaliza">Localização.</span>
+            </h1>
+            <h6>Encontre-nos facilmente com a integração do <a class="linkMapa" href="https://maps.app.goo.gl/4x8YPuuDUYK7ZGFh6">Google Maps</a>. Insira nosso endereço para uma navegação
+                simples e uma chegada sem estresse</h6>
+        </div>
+        <div class="containerMapa">
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <section class="slideOferecimento">
+        <main>
+            <div class="containerSlide">
+                <div class="carrossel">
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Descubra o conforto de estar à beira-mar.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">O refúgio perfeito para corpo e alma.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Hospitalidade que abraça.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Experiência única em cada detalhe.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Caminhe descalço e sinta a liberdade.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">A natureza é nosso maior luxo.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Aqui, o tempo desacelera com você.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Mais do que hospedagem, memórias.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Paraíso existe, e começa aqui.</h6>
+                    </div>
+                    <div class="itemSlider">
+                        <h6 class="itemSlide">Hospede-se onde o mar encontra a paz.</h6>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <section class="about-section" id="sobre">
+        <div class="about-container">
+            <h2 class="about-title">Sobre <span class="highlight">Nós.</span></h2>
+
+            <div class="about-content">
+                <div class="about-image hidden">
+                    <img src="img/entradaPorto.png" alt="Entrada do Hotel" />
+                </div>
+
+                <div class="about-text hidden">
+                    <p>
+                        <span class="highlight">Descubra o charme do litoral</span> no
+                        <span class="highlight">Hotel Porto da Lua!</span>
+                    </p>
+                    <p>
+                        Cercado por <span class="highlight">natureza exuberante</span> e com uma
+                        <span class="highlight">vista de tirar o fôlego</span>, oferecemos o
+                        <span class="highlight">equilíbrio perfeito</span> entre
+                        <span class="highlight">conforto</span> e
+                        <span class="highlight">beleza natural</span>.
+                    </p>
+                    <p>
+                        Ideal para quem busca <span class="highlight">descanso</span>,
+                        <span class="highlight">romance</span> ou momentos únicos em família.
+                    </p>
+                    <p>
+                        ✨ Viva a <span class="highlight">magia do Porto da Lua.</span><br>
+                        🛌 Seu refúgio perfeito está te esperando!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicosVIP" id="servicos">
+        <div class="containerTextosServicos">
+            <div class="textosServicos hidden-down">
+                <p class="subtitulo">SEUS SERVIÇOS EXCLUSIVOS</p>
+                <h1 class="tituloPrincipal">O que <span class="destaqueText1">nós</span> oferecemos</h1>
+            </div>
+            <div class="textosServicos hidden-down instagramInfo">
+                <p class="subtitulo">Quer saber mais sobre o nosso hotel? Dá uma passada no nosso Instagram, maninho.
+                </p>
+                <a href="https://www.instagram.com/hotelportodaluamaruda?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" class="tituloPrincipal instaLink">
+                    <span class="destaqueText1">@hotelportodaluamaruda</span>
                 </a>
             </div>
         </div>
-    </section>
 
-    <section class="family" id="family">
-        <div class="paraiso">
-            <h1 class="tittleParaiso">Descubra o Paraíso no <span>Hotel Porto da Lua.</span></h1>
-        </div>
-        <div class="containerFamily">
-            <div class="imgWrapper hidden-up">
-                <img class="imgFamily" src="img/praiaPorto.png">
-                <div class="imgDescription">
-                    <i class="bi bi-1-circle-fill meu-icone"></i>
-                    <span class="descricao">Praia encantadora</span>
-                </div>
-            </div>
-            <div class="imgWrapper hidden-up">
-                <img class="imgFamily" src="img/praiaPorto.png">
-                <div class="imgDescription">
-                    <i class="bi bi-2-circle-fill meu-icone"></i>
-                    <span class="descricao">Praia encantadora</span>
-                </div>
-            </div>
-            <div class="imgWrapper hidden-up">
-                <img class="imgFamily" src="img/praiaPorto.png">
-                <div class="imgDescription">
-                    <i class="bi bi-3-circle-fill meu-icone"></i>
-                    <span class="descricao">Praia encantadora</span>
-                </div>
-            </div>
-            <div class="imgWrapper hidden-up">
-                <img class="imgFamily" src="img/praiaPorto.png">
-                <div class="imgDescription">
-                    <i class="bi bi-4-circle-fill meu-icone"></i>
-                    <span class="descricao">Praia encantadora</span>
-                </div>
+        <!-- Carrossel Desktop -->
+        <div class="container hidden-up d-none d-md-flex">
+            <div class="card-wrapper">
+                <div class="card" data-index="1"><img class="imgServicos" src="img/hidroPorto2.jpeg"></div>
+                <div class="card" data-index="2"><img class="imgServicos" src="img/cafePorto.jpeg"></div>
+                <div class="card" data-index="3"><img class="imgServicos" src="img/quartoPorto.jpeg"></div>
+                <div class="card" data-index="4"><img class="imgServicos" src="img/recpcaoPorto.jpeg"></div>
+                <div class="card" data-index="5"><img class="imgServicos" src="img/casalPorto.jpeg"></div>
+                <div class="card" data-index="6"><img class="imgServicos" src="img/hidroPorto.jpeg"></div>
+                <div class="card" data-index="7"><img class="imgServicos" src="img/confortPorto.jpeg"></div>
+                <div class="card" data-index="8"><img class="imgServicos" src="img/petFriendly.jpeg"></div>
             </div>
         </div>
-    </section>
 
-    <section class="sobre">
-        <div>
-            <h2></h2>
-            <img src="">
+        <!-- Carrossel Mobile -->
+        <div id="carouselMobile" class="carousel slide d-md-none" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="6"
+                    aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="7"
+                    aria-label="Slide 8"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="img/hidroPorto2.jpeg" class="d-block w-100" alt="..."></div>
+                <div class="carousel-item"><img src="img/cafePorto.jpeg" class="d-block w-100" alt="..."></div>
+                <div class="carousel-item"><img src="img/quartoPorto.jpeg" class="d-block w-100" alt="..."></div>
+                <div class="carousel-item"><img src="img/recpcaoPorto.jpeg" class="d-block w-100" alt="..."></div>
+                <div class="carousel-item"><img src="img/casalPorto.jpeg" class="d-block w-100" alt="..."></div>
+                <div class="carousel-item"><img src="img/hidroPorto.jpeg" class="d-block w-100" alt="..."></div>
+                <div class="carousel-item"><img src="img/confortPorto.jpeg" class="d-block w-100" alt="..."></div>
+                <div class="carousel-item"><img src="img/petFriendly.jpeg" class="d-block w-100" alt="..."></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
         </div>
     </section>
 
-    <section class="rodape">
+    <!-- Ícones dos serviços -->
+    <div class="containerIconsServicosVIP">
+        <div class="boxContainerServicos">
+            <div class="iconsServicesVIP">
+                <img class="iconsServices" src="icons/sinal-wifi.png">
+                <h6>Wi-Fi</h6>
+            </div>
+            <div class="iconsServicesVIP">
+                <img class="iconsServices" src="icons/talheres.png">
+                <h6>Café da Manhã</h6>
+            </div>
+            <div class="iconsServicesVIP">
+                <img class="iconsServices" src="icons/patas.png">
+                <h6>Pet Friendly</h6>
+            </div>
+        </div>
+    </div>
+
+    <section class="">
+
+    </section>
+
+    <section class="rodape" id="contatos">
         <footer class="hidden-up">
             <div id="footer_content">
                 <div id="footer_contacts">
@@ -106,15 +273,16 @@
                     <p>It's all about your dreams.</p>
 
                     <div id="footer_social_media">
-                        <a href="#" class="footer-link" id="instagram">
+                        <a href="https://www.instagram.com/hotelportodaluamaruda?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            class="footer-link" id="instagram">
                             <i class="bi bi-instagram"></i>
                         </a>
 
-                        <a href="#" class="footer-link" id="facebook">
+                        <a href="https://www.facebook.com/hotelportodaluamaruda" class="footer-link" id="facebook">
                             <i class="bi bi-facebook"></i>
                         </a>
 
-                        <a href="#" class="footer-link" id="whatsapp">
+                        <a href="tel:+5591993691074" class="footer-link" id="whatsapp">
                             <i class="bi bi-whatsapp"></i>
                         </a>
                     </div>
@@ -179,10 +347,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
         integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="scripts/headerRol.js"></script>
     <script src="scripts/scroll.js"></script>
     <script src="scripts/topicosScroll.js"></script>
     <script src="scripts/efeitoMove.js"></script>
+    <script src="scripts/servicos.js"></script>
+    <script src="scripts/mapa.js"></script>
+    <script src="scripts/servicosVIP.js"></script>
+    <script src="scripts/reserva.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,86 @@
+.localizacao {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0;
+}
+
+.containerTextLocaliza {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.tittleLocaliza {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-top: 40px;
+    font-size: 1.8rem;
+}
+
+.destaqueTextlocaliza {
+    color: #ff7b00;
+}
+
+.linkMapa {
+    color: rgb(22, 89, 177);
+}
+
+.containerTextLocaliza h6 {
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+.containerMapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#map {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+    .tittleLocaliza {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .containerTextLocaliza h6 {
+        font-size: 0.95rem;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tittleLocaliza {
+        font-size: 1.3rem;
+    }
+
+    .containerTextLocaliza h6 {
+        font-size: 0.9rem;
+    }
+
+    #map {
+        height: 250px;
+    }
+}

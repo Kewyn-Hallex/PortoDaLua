@@ -1,0 +1,272 @@
+.servicosVIP {
+    width: 100%;
+    height: 700px;
+    background-image: url('../img/fundoSection.png');
+    background-size: cover;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textosServicos {
+    margin-bottom: 40px;
+    margin-left: 250px;
+    border-left: #ff9807 solid 3px;
+    padding: 10px;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.tituloPrincipal {
+    font-size: 2.8rem;
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    line-height: 1;
+}
+
+.destaqueText1 {
+    color: #ff9807;
+    font-weight: bold;
+}
+
+/* Container dos textos principais */
+.containerTextosServicos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 60px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Parte do Instagram posicionada à direita */
+.instagramInfo {
+    text-align: right;
+    max-width: 400px;
+}
+
+/* Estilo do link do Instagram */
+.instaLink {
+    font-size: 1.7rem;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+/* Responsivo - tablets */
+@media (max-width: 1024px) {
+    .containerTextosServicos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .instagramInfo {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .instaLink {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsivo - celulares pequenos */
+@media (max-width: 480px) {
+    .instaLink {
+        font-size: 1.2rem;
+        display: inline-block;
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .instagramInfo {
+        padding: 0 10px;
+    }
+}
+
+
+.card-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.card {
+    position: absolute;
+    width: 356px;
+    height: 312px;
+    box-shadow: inset 3px 3px rgba(255, 220, 200, 0.4);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.card.active {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.card.above {
+    transform: translateX(-120%) scale(0.7);
+    filter: blur(2px);
+    z-index: 5;
+}
+
+.card.below {
+    transform: translateX(120%) scale(0.7);
+    filter: blur(2px);
+    z-index: 5;
+}
+
+.card.hidden {
+    display: none;
+}
+
+.imgServicos {
+    width: 400px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.containerIconsServicosVIP {
+    width: 100%;
+    height: 200px;
+    background-color: #fff9f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxContainerServicos {
+    display: flex;
+    gap: 40px;
+}
+
+.iconsServicesVIP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.iconsServices {
+    margin-top: 100px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+}
+
+.iconsServicesVIP h6 {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Responsivo: tablets e celulares */
+@media (max-width: 1024px) {
+    .servicosVIP {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .textosServicos {
+        margin-left: 0;
+        border-left: none;
+        text-align: center;
+    }
+
+    .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 20px 0;
+    }
+
+    .card {
+        position: relative;
+        margin-bottom: 20px;
+        transform: none !important;
+        filter: none !important;
+        z-index: 1 !important;
+        display: block;
+    }
+
+    .imgServicos {
+        width: 90%;
+        height: auto;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tituloPrincipal {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 0.9rem;
+    }
+
+    .boxContainerServicos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .containerIconsServicosVIP {
+        height: auto;
+        padding: 30px 10px;
+    }
+
+    .iconsServicesVIP h6 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloPrincipal {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .iconsServices {
+        width: 40px;
+        height: 40px;
+    }
+
+    .imgServicos {
+        width: 100%;
+        height: auto;
+    }
+}
