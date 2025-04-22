@@ -76,11 +76,40 @@
                     </div>
                 </div>
                 <div class="col segundaColuna">
-                    <div class="containerServicos">
+                    <!-- Slider de imagens (desktop) -->
+                    <div class="containerServicos desktop-only">
                         <img class="hidden-right" src="img/portoMar.png">
                         <img class="hidden-right" src="img/piscinaPorto.png">
                         <img class="hidden-right" src="img/areaPorto.png">
                         <img class="hidden-right" src="img/praiaPorto.png">
+                    </div>
+
+                    <!-- Carrossel Bootstrap (mobile) -->
+                    <div id="carouselExampleAutoplaying" class="carousel slide mobile-only" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/portoMar.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/piscinaPorto.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/areaPorto.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/praiaPorto.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -91,7 +120,9 @@
         <div class="containerTextLocaliza">
             <h1 class="tittleLocaliza hidden-up">Descubra nossa <span class="destaqueTextlocaliza">Localização.</span>
             </h1>
-            <h6>Encontre-nos facilmente com a integração do <a class="linkMapa" href="https://maps.app.goo.gl/4x8YPuuDUYK7ZGFh6">Google Maps</a>. Insira nosso endereço para uma navegação
+            <h6>Encontre-nos facilmente com a integração do <a class="linkMapa"
+                    href="https://maps.app.goo.gl/4x8YPuuDUYK7ZGFh6">Google Maps</a>. Insira nosso endereço para uma
+                navegação
                 simples e uma chegada sem estresse</h6>
         </div>
         <div class="containerMapa">

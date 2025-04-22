@@ -54,13 +54,15 @@
     width: 35%;
 }
 
-.containerServicos :nth-child(2){
+.containerServicos :nth-child(2) {
     transition-delay: 500ms;
 }
-.containerServicos :nth-child(3){
+
+.containerServicos :nth-child(3) {
     transition-delay: 700ms;
 }
-.containerServicos :nth-child(4){
+
+.containerServicos :nth-child(4) {
     transition-delay: 900ms;
 }
 
@@ -85,17 +87,18 @@
 
 @media (max-width: 768px) {
     .row.row-cols-2 {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
-  
-    .primeiraColuna, .segundaColuna {
-      width: 100%;
-    }
-  
+
+    .primeiraColuna,
     .segundaColuna {
-      margin-top: 30px;
-      margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .segundaColuna {
+        margin-top: 30px;
+        margin-bottom: 50px;
     }
 
     .containerServicos img {
@@ -105,4 +108,30 @@
     .tittleParaiso1 {
         text-align: center;
     }
-  }
+}
+
+/* Esconde no mobile */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Mostra o carrossel no mobile e esconde o slider */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block !important;
+        margin-top: 20px;
+    }
+
+    .containerServicos img:hover {
+        width: 20% !important;
+        /* cancela hover no mobile */
+    }
+}
